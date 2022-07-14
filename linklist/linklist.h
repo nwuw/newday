@@ -1,19 +1,21 @@
-#define NODE sizeof(struct listNode )
-#define LIST sizeof(struct listBody )
+#define NODE sizeof(struct listNode)
+#define LIST sizeof(struct listBody)
 
 #include "utils.h"
 
-typedef struct listNode {
-	struct listNode* pPrevious;
+typedef struct listNode
+{
+	struct listNode *pPrevious;
 	int value;
-	struct listNode* pNext;
-} node, * pNode;
+	struct listNode *pNext;
+} node, *pNode;
 
-typedef struct listBody {
+typedef struct listBody
+{
 	pNode pointHead;
 	int number;
 	pNode pointTail;
-} list, * pList;
+} list, *pList;
 
 void init(pList);
 

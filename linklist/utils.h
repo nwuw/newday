@@ -4,8 +4,8 @@
 #include <math.h>
 #include <time.h>
 
-void getRand(int*, int);
+void getRand(int *, int);
 
-void traverseArrays(int*, int);
+void traverseArrays(int *, int);
 
-void swapNumber(int* a, int* b);
+void swapNumber(int *a, int *b);
