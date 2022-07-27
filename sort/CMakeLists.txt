@@ -8,4 +8,6 @@ add_executable(
     main.c
     utils.h
     utils.c
+    sort.h
+    sort.c
 )

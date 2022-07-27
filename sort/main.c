@@ -1,15 +1,19 @@
 #include "utils.h"
+#include "sort.h"
 
 int main()
 {
-    printf("hello sort!!!\n");
-    
-
+    printf("!!!sort!!!\n");
     int a[10];
+    int len = (int) sizeof(a) / sizeof(*a);
 
-    getRand(a,10);
+    getRand(a, len);
 
-    traverseArrays(a,10);
+    traverseArrays(a, len);
+
+    bubble_sort(a, len);
+
+    traverseArrays(a, len);
 
     return 0;
 }

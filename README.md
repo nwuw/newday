@@ -19,7 +19,7 @@
    cmake . -B build -G "Unix Makefiles"
    ```
 
-3. 编写项目并显示编译信息
+3. 编译项目并显示编译信息
 
    ```shell
    cmake --build ./build -v
@@ -36,7 +36,7 @@
 
 ## CMakeLists.txt解析
 
-```c
+```cmake
 // 设置项目编译所使用的的 cmake 版本
 cmake_minimum_required(VERSION 3.23.2)
 // 设置项目名称和项目所使用的语言
@@ -51,3 +51,4 @@ add_executable(
     main.c
 )
 ```
+
