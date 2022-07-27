@@ -4,7 +4,7 @@
 void getRand(int *arr, int num)
 {
 	// 设置随机数种子
-	srand(time(0));
+	srand(time(NULL));
 	for (int i = 0; i < num; ++i)
 	{
 		arr[i] = rand() % 100;

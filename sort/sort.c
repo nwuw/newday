@@ -26,6 +26,11 @@ void bubble_sort(int *arr, int num)
     {
         for (int j = 0; j < num - i; j++)
         {
+            if (j == num - i - 1)
+            {
+                break;
+            }
+
             if (arr[j] > arr[j + 1])
             {
                 int tab = arr[j];
