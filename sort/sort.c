@@ -1,8 +1,8 @@
 #include "sort.h"
 
-void bubble_sort(int *arr, int num)
+void quick_sort(int *arr, int num)
 {
-    printf("冒泡排序\n");
+    printf("快速排序\n");
 
     for (int i = 0; i < num; i++)
     {
@@ -13,6 +13,24 @@ void bubble_sort(int *arr, int num)
                 int tab = arr[j];
                 arr[j] = arr[i];
                 arr[i] = tab;
+            }
+        }
+    }
+};
+
+void bubble_sort(int *arr, int num)
+{
+    printf("冒泡排序\n");
+
+    for (int i = 0; i < num; i++)
+    {
+        for (int j = 0; j < num - i; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                int tab = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tab;
             }
         }
     }
