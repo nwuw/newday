@@ -22,3 +22,15 @@ int isPrimeNumber(int number) {
         return 0;
     }
 }
+
+void outputFileContent(char *fileName, char *mode) {
+    char buff[1024];
+    FILE *pFile = fopen(fileName, mode);
+
+    while (NULL != fgets(buff, 1024, (FILE *) pFile)) {
+        fgets(buff, 1024, (FILE *) pFile);
+        printf("%s\n", buff);
+    }
+
+    fclose(pFile);
+}

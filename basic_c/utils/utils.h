@@ -11,3 +11,5 @@
 
 // 输入一个数判断是否是素数
 int isPrimeNumber(int);
+
+void outputFileContent(char *, char *);
