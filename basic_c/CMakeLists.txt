@@ -8,4 +8,4 @@ add_executable(
         main.c
         utils/utils.h
         utils/utils.c
-)
+        test_struct/struct_list.h)

@@ -12,7 +12,20 @@ int main() {
 //    printf("素数一共有%d个\n", sum);
 
 
-    outputFileContent("/Users/muqing/Downloads/codes/newday/basic_c/demo.txt", "r+");
+    outputFileContent("/Users/muqing/Downloads/codes/other/newday/basic_c/demo.txt", "r+");
+    int a[] = {1, 3};
+    int * p = a;
+    char t = 'A';
+    short n = 0;
+
+    printf("%lu\n", sizeof(1));
+    printf("%lu\n", sizeof(n));
+    printf("%lu\n", sizeof(1.1));
+    printf("%lu\n", sizeof(t));
+    printf("%lu\n", sizeof(p));
+    printf("%lu\n", p[0]);
+    printf("%lu\n", p[1]);
+
 
     return 0;
 }
