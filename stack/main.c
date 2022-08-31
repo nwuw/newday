@@ -45,6 +45,16 @@ int main() {
         popSeqStack(pSeqStack1, tag3);
     }
     clearSeqStack(pSeqStack1);
+    int num = 35;
+    while (num != 0) {
+        int tag = num % 2;
+        pSeqStackElem tag4 = (pSeqStackElem) malloc(sizeof(seqStackElem));
+        tag4->value = tag;
+        pushSeqStack(pSeqStack1, tag4);
+        num /= 2;
+    }
+    traverseSeqStack(*pSeqStack1);
+    clearSeqStack(pSeqStack1);
     destroySeqStack(pSeqStack1);
     return 0;
 }
