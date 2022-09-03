@@ -55,3 +55,8 @@ void midOrderTraverse(pTreeNode);
 
 // 后序遍历
 void postOrderTraverse(pTreeNode);
+
+// 二叉排序树
+void sortInsert(pTreeBody, int);
+
+pTreeNode searchWithValue(pTreeNode, int);

@@ -116,3 +116,48 @@ void fullInsert(pTreeBody pTree, int v) {
     }
 
 }
+
+void sortInsert(pTreeBody tree, int v) {
+    pTreeNode newNode = (pTreeNode) malloc(sizeof(treeNode));
+    newNode->value = v;
+    newNode->lChild = NULL;
+    newNode->rChild = NULL;
+
+    int emptyTree = isEmptyTree(tree);
+    if (0 == emptyTree) {
+        tree->treeTop = newNode;
+        tree->number++;
+    } else {
+        pTreeNode withValue = searchWithValue(tree, v);
+        if (!withValue) {
+            pTreeNode tag = tree->treeTop;
+            pTreeNode parents = NULL;
+            while (tag) {
+                parents = tag;
+                tag = (v < tag->value) ? tag->lChild : tag->rChild;
+            }
+            if (v < parents->value)
+                parents->lChild = newNode;
+            else
+                parents->rChild = newNode;
+        } else {
+            printf("该树中已存在此值!!!\n");
+        }
+    }
+}
+
+pTreeNode searchWithValue(pTreeNode node, int value) {
+    if (node) {
+        if (node->value == value) {
+            return node;
+        } else if (node->lChild && node->lChild->value == value) {
+            return node->lChild;
+        } else if (node->rChild && node->rChild->value == value) {
+            return node->rChild;
+        } else {
+            searchWithValue(node->lChild, value);
+            searchWithValue(node->rChild, value);
+        }
+        return NULL;
+    }
+}
